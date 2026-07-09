@@ -1,0 +1,344 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] [1m---------------------< [0;36mcom.bibliotech:bibliotech[0;1m >----------------------[m
+[INFO] [1mBuilding BiblioTech 1.0.0[m
+[INFO]   from pom.xml
+[INFO] [1m--------------------------------[ jar ]---------------------------------[m
+[INFO] 
+[INFO] [1m--- [0;32mclean:3.3.2:clean[m [1m(default-clean)[m @ [36mbibliotech[0;1m ---[m
+[INFO] Deleting C:\Users\diego\bibliotech\bibliotech\target
+[INFO] 
+[INFO] [1m--- [0;32mresources:3.3.1:resources[m [1m(default-resources)[m @ [36mbibliotech[0;1m ---[m
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 8 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] [1m--- [0;32mcompiler:3.11.0:compile[m [1m(default-compile)[m @ [36mbibliotech[0;1m ---[m
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 17 source files with javac [debug release 17] to target\classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] 
+[INFO] [1m--- [0;32mresources:3.3.1:testResources[m [1m(default-testResources)[m @ [36mbibliotech[0;1m ---[m
+[INFO] skip non existing resourceDirectory C:\Users\diego\bibliotech\bibliotech\src\test\resources
+[INFO] 
+[INFO] [1m--- [0;32mcompiler:3.11.0:testCompile[m [1m(default-testCompile)[m @ [36mbibliotech[0;1m ---[m
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 9 source files with javac [debug release 17] to target\test-classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] 
+[INFO] [1m--- [0;32msurefire:3.2.5:test[m [1m(default-test)[m @ [36mbibliotech[0;1m ---[m
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.bibliotech.selenium.[1mEmprestimoSeleniumTest[m
+17:32:12.831 [main] INFO io.github.bonigarcia.wdm.WebDriverManager -- Using chromedriver 149.0.7827.115 (resolved driver for Chrome 149)
+17:32:12.869 [main] INFO io.github.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as C:\Users\diego\.cache\selenium\chromedriver\win64\149.0.7827.115\chromedriver.exe
+jun. 14, 2026 5:32:14 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find CDP implementation matching 149
+jun. 14, 2026 5:32:14 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+ADVERTÊNCIA: Unable to find version of CDP to use for 149.0.7827.115. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+jun. 14, 2026 5:32:18 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find CDP implementation matching 149
+jun. 14, 2026 5:32:18 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+ADVERTÊNCIA: Unable to find version of CDP to use for 149.0.7827.115. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+jun. 14, 2026 5:32:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find CDP implementation matching 149
+jun. 14, 2026 5:32:19 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+ADVERTÊNCIA: Unable to find version of CDP to use for 149.0.7827.115. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[INFO] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.887 s -- in com.bibliotech.selenium.[1mEmprestimoSeleniumTest[m
+[INFO] Running com.bibliotech.selenium.[1mLivroSeleniumTest[m
+17:32:21.271 [main] INFO io.github.bonigarcia.wdm.WebDriverManager -- Using chromedriver 149.0.7827.115 (resolved driver for Chrome 149)
+17:32:21.283 [main] INFO io.github.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as C:\Users\diego\.cache\selenium\chromedriver\win64\149.0.7827.115\chromedriver.exe
+jun. 14, 2026 5:32:22 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find CDP implementation matching 149
+jun. 14, 2026 5:32:22 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+ADVERTÊNCIA: Unable to find version of CDP to use for 149.0.7827.115. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+jun. 14, 2026 5:32:25 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find CDP implementation matching 149
+jun. 14, 2026 5:32:25 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+ADVERTÊNCIA: Unable to find version of CDP to use for 149.0.7827.115. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+jun. 14, 2026 5:32:38 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find CDP implementation matching 149
+jun. 14, 2026 5:32:38 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+ADVERTÊNCIA: Unable to find version of CDP to use for 149.0.7827.115. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+jun. 14, 2026 5:32:40 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find CDP implementation matching 149
+jun. 14, 2026 5:32:40 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+ADVERTÊNCIA: Unable to find version of CDP to use for 149.0.7827.115. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[ERROR] [1;31mTests [0;1mrun: [0;1m4[m, Failures: 0, [1;31mErrors: [0;1;31m1[m, Skipped: 0, Time elapsed: 21.27 s[1;31m <<< FAILURE![m -- in com.bibliotech.selenium.[1mLivroSeleniumTest[m
+[ERROR] com.bibliotech.selenium.LivroSeleniumTest.deveImpedirISBNDuplicado -- Time elapsed: 13.91 s <<< ERROR!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for visibility of element located by By.cssSelector: .alert-danger (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.115, chrome: {chromedriverVersion: 149.0.7827.115 (daf70f9ddee..., userDataDir: C:\Users\diego\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58622}, goog:processID: 13568, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58622/devtoo..., se:cdpVersion: 149.0.7827.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 09bc3d0010893b963c818de1baac06df
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.bibliotech.selenium.LivroSeleniumTest.deveImpedirISBNDuplicado(LivroSeleniumTest.java:56)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[INFO] Running com.bibliotech.selenium.[1mLoginSeleniumTest[m
+17:32:42.546 [main] INFO io.github.bonigarcia.wdm.WebDriverManager -- Using chromedriver 149.0.7827.115 (resolved driver for Chrome 149)
+17:32:42.560 [main] INFO io.github.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as C:\Users\diego\.cache\selenium\chromedriver\win64\149.0.7827.115\chromedriver.exe
+jun. 14, 2026 5:32:43 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find CDP implementation matching 149
+jun. 14, 2026 5:32:43 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+ADVERTÊNCIA: Unable to find version of CDP to use for 149.0.7827.115. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+jun. 14, 2026 5:32:46 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find CDP implementation matching 149
+jun. 14, 2026 5:32:46 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+ADVERTÊNCIA: Unable to find version of CDP to use for 149.0.7827.115. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+jun. 14, 2026 5:32:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find CDP implementation matching 149
+jun. 14, 2026 5:32:59 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+ADVERTÊNCIA: Unable to find version of CDP to use for 149.0.7827.115. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[ERROR] [1;31mTests [0;1mrun: [0;1m3[m, Failures: 0, [1;31mErrors: [0;1;31m1[m, Skipped: 0, Time elapsed: 17.88 s[1;31m <<< FAILURE![m -- in com.bibliotech.selenium.[1mLoginSeleniumTest[m
+[ERROR] com.bibliotech.selenium.LoginSeleniumTest.deveFazerLoginComSucesso -- Time elapsed: 12.80 s <<< ERROR!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for url to contain "/dashboard". Current url: "http://localhost:8080/login;jsessionid=90E6278EFDEB09B8A53B5BE05C829C08" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.115, chrome: {chromedriverVersion: 149.0.7827.115 (daf70f9ddee..., userDataDir: C:\Users\diego\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57261}, goog:processID: 22056, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57261/devtoo..., se:cdpVersion: 149.0.7827.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 17604c4fce1517732b1c448dee64eb9e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.bibliotech.selenium.LoginSeleniumTest.deveFazerLoginComSucesso(LoginSeleniumTest.java:20)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[INFO] Running com.bibliotech.selenium.[1mUsuarioSeleniumTest[m
+17:33:00.425 [main] INFO io.github.bonigarcia.wdm.WebDriverManager -- Using chromedriver 149.0.7827.115 (resolved driver for Chrome 149)
+17:33:00.431 [main] INFO io.github.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as C:\Users\diego\.cache\selenium\chromedriver\win64\149.0.7827.115\chromedriver.exe
+jun. 14, 2026 5:33:01 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find CDP implementation matching 149
+jun. 14, 2026 5:33:01 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+ADVERTÊNCIA: Unable to find version of CDP to use for 149.0.7827.115. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+jun. 14, 2026 5:33:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find CDP implementation matching 149
+jun. 14, 2026 5:33:02 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+ADVERTÊNCIA: Unable to find version of CDP to use for 149.0.7827.115. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[ERROR] [1;31mTests [0;1mrun: [0;1m2[m, Failures: 0, [1;31mErrors: [0;1;31m1[m, Skipped: 0, Time elapsed: 3.983 s[1;31m <<< FAILURE![m -- in com.bibliotech.selenium.[1mUsuarioSeleniumTest[m
+[ERROR] com.bibliotech.selenium.UsuarioSeleniumTest.deveExibirErroCPFInvalido -- Time elapsed: 1.810 s <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":".alert-danger"}
+  (Session info: chrome=149.0.7827.115)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [aaf69dd9afc76c7e902dbc1444a3a540, findElement {using=css selector, value=.alert-danger}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.115, chrome: {chromedriverVersion: 149.0.7827.115 (daf70f9ddee..., userDataDir: C:\Users\diego\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56573}, goog:processID: 7896, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56573/devtoo..., se:cdpVersion: 149.0.7827.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: aaf69dd9afc76c7e902dbc1444a3a540
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at com.bibliotech.selenium.UsuarioSeleniumTest.deveExibirErroCPFInvalido(UsuarioSeleniumTest.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[INFO] Running com.bibliotech.unit.[1mDashboardServiceTest[m
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (C:\Users\diego\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.10\byte-buddy-agent-1.14.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+[INFO] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.655 s -- in com.bibliotech.unit.[1mDashboardServiceTest[m
+[INFO] Running com.bibliotech.unit.[1mEmprestimoServiceTest[m
+[ERROR] [1;31mTests [0;1mrun: [0;1m9[m, [1;31mFailures: [0;1;31m5[m, Errors: 0, Skipped: 0, Time elapsed: 0.198 s[1;31m <<< FAILURE![m -- in com.bibliotech.unit.[1mEmprestimoServiceTest[m
+[ERROR] com.bibliotech.unit.EmprestimoServiceTest.deveCalcularMultaParaCincoDiasDeAtraso -- Time elapsed: 0.091 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: BUG-002: Multa deveria ser R$ 2,00 × 5 dias = R$ 10,00 ==> expected: <10.0> but was: <15.0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1024)
+	at com.bibliotech.unit.EmprestimoServiceTest.deveCalcularMultaParaCincoDiasDeAtraso(EmprestimoServiceTest.java:77)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] com.bibliotech.unit.EmprestimoServiceTest.deveCalcularDataDevolucaoCom14Dias -- Time elapsed: 0.006 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: BUG-003: Prazo de devolução deve ser 14 dias ==> expected: <2026-06-28> but was: <2026-06-21>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+	at com.bibliotech.unit.EmprestimoServiceTest.deveCalcularDataDevolucaoCom14Dias(EmprestimoServiceTest.java:127)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] com.bibliotech.unit.EmprestimoServiceTest.deveCalcularMultaParaDezDiasDeAtraso -- Time elapsed: 0.007 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <20.0> but was: <30.0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:81)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1014)
+	at com.bibliotech.unit.EmprestimoServiceTest.deveCalcularMultaParaDezDiasDeAtraso(EmprestimoServiceTest.java:112)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] com.bibliotech.unit.EmprestimoServiceTest.deveImpedirEmprestimoComLivroIndisponivel -- Time elapsed: 0.008 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: BUG-004: Deveria lançar exceção ao tentar emprestar livro sem exemplares ==> Expected java.lang.RuntimeException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3131)
+	at com.bibliotech.unit.EmprestimoServiceTest.deveImpedirEmprestimoComLivroIndisponivel(EmprestimoServiceTest.java:142)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] com.bibliotech.unit.EmprestimoServiceTest.deveCalcularMultaParaUmDiaDeAtraso -- Time elapsed: 0.007 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: RN-03: Multa para 1 dia de atraso deve ser R$ 2,00 ==> expected: <2.0> but was: <3.0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1024)
+	at com.bibliotech.unit.EmprestimoServiceTest.deveCalcularMultaParaUmDiaDeAtraso(EmprestimoServiceTest.java:100)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[INFO] Running com.bibliotech.unit.[1mLivroServiceTest[m
+[ERROR] [1;31mTests [0;1mrun: [0;1m9[m, [1;31mFailures: [0;1;31m2[m, Errors: 0, Skipped: 0, Time elapsed: 0.147 s[1;31m <<< FAILURE![m -- in com.bibliotech.unit.[1mLivroServiceTest[m
+[ERROR] com.bibliotech.unit.LivroServiceTest.deveDefinirQuantidadeDisponivelAoCadastrar -- Time elapsed: 0.006 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <5> but was: <3>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:555)
+	at com.bibliotech.unit.LivroServiceTest.deveDefinirQuantidadeDisponivelAoCadastrar(LivroServiceTest.java:88)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] com.bibliotech.unit.LivroServiceTest.deveLancarExcecaoAoCadastrarISBNDuplicado -- Time elapsed: 0.005 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: RN-02 violado: Deveria lançar exceção para ISBN duplicado ==> Expected java.lang.RuntimeException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3131)
+	at com.bibliotech.unit.LivroServiceTest.deveLancarExcecaoAoCadastrarISBNDuplicado(LivroServiceTest.java:61)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[INFO] Running com.bibliotech.unit.[1mUsuarioServiceTest[m
+[ERROR] [1;31mTests [0;1mrun: [0;1m6[m, [1;31mFailures: [0;1;31m2[m, Errors: 0, Skipped: 0, Time elapsed: 0.041 s[1;31m <<< FAILURE![m -- in com.bibliotech.unit.[1mUsuarioServiceTest[m
+[ERROR] com.bibliotech.unit.UsuarioServiceTest.deveImpedirExclusaoComEmprestimosAtivos -- Time elapsed: 0.008 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Deveria lançar exceção ao excluir usuário com empréstimos ativos ==> Expected java.lang.RuntimeException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3131)
+	at com.bibliotech.unit.UsuarioServiceTest.deveImpedirExclusaoComEmprestimosAtivos(UsuarioServiceTest.java:108)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] com.bibliotech.unit.UsuarioServiceTest.deveAutenticarUsuarioAtivo -- Time elapsed: 0.005 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: BUG-006: Deveria autenticar usuário com senha correta ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at com.bibliotech.unit.UsuarioServiceTest.deveAutenticarUsuarioAtivo(UsuarioServiceTest.java:97)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] [1;31mFailures: [m
+[ERROR] [1;31m  EmprestimoServiceTest.deveCalcularDataDevolucaoCom14Dias:127 BUG-003: Prazo de devolução deve ser 14 dias ==> expected: <2026-06-28> but was: <2026-06-21>[m
+[ERROR] [1;31m  EmprestimoServiceTest.deveCalcularMultaParaCincoDiasDeAtraso:77 BUG-002: Multa deveria ser R$ 2,00 × 5 dias = R$ 10,00 ==> expected: <10.0> but was: <15.0>[m
+[ERROR] [1;31m  EmprestimoServiceTest.deveCalcularMultaParaDezDiasDeAtraso:112 expected: <20.0> but was: <30.0>[m
+[ERROR] [1;31m  EmprestimoServiceTest.deveCalcularMultaParaUmDiaDeAtraso:100 RN-03: Multa para 1 dia de atraso deve ser R$ 2,00 ==> expected: <2.0> but was: <3.0>[m
+[ERROR] [1;31m  EmprestimoServiceTest.deveImpedirEmprestimoComLivroIndisponivel:142 BUG-004: Deveria lançar exceção ao tentar emprestar livro sem exemplares ==> Expected java.lang.RuntimeException to be thrown, but nothing was thrown.[m
+[ERROR] [1;31m  LivroServiceTest.deveDefinirQuantidadeDisponivelAoCadastrar:88 expected: <5> but was: <3>[m
+[ERROR] [1;31m  LivroServiceTest.deveLancarExcecaoAoCadastrarISBNDuplicado:61 RN-02 violado: Deveria lançar exceção para ISBN duplicado ==> Expected java.lang.RuntimeException to be thrown, but nothing was thrown.[m
+[ERROR] [1;31m  UsuarioServiceTest.deveAutenticarUsuarioAtivo:97 BUG-006: Deveria autenticar usuário com senha correta ==> expected: <true> but was: <false>[m
+[ERROR] [1;31m  UsuarioServiceTest.deveImpedirExclusaoComEmprestimosAtivos:108 Deveria lançar exceção ao excluir usuário com empréstimos ativos ==> Expected java.lang.RuntimeException to be thrown, but nothing was thrown.[m
+[ERROR] [1;31mErrors: [m
+[ERROR] [1;31m  LivroSeleniumTest.deveImpedirISBNDuplicado:56 » Timeout Expected condition failed: waiting for visibility of element located by By.cssSelector: .alert-danger (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.115, chrome: {chromedriverVersion: 149.0.7827.115 (daf70f9ddee..., userDataDir: C:\Users\diego\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58622}, goog:processID: 13568, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58622/devtoo..., se:cdpVersion: 149.0.7827.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 09bc3d0010893b963c818de1baac06df[m
+[ERROR] [1;31m  LoginSeleniumTest.deveFazerLoginComSucesso:20 » Timeout Expected condition failed: waiting for url to contain "/dashboard". Current url: "http://localhost:8080/login;jsessionid=90E6278EFDEB09B8A53B5BE05C829C08" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.115, chrome: {chromedriverVersion: 149.0.7827.115 (daf70f9ddee..., userDataDir: C:\Users\diego\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57261}, goog:processID: 22056, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57261/devtoo..., se:cdpVersion: 149.0.7827.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 17604c4fce1517732b1c448dee64eb9e[m
+[ERROR] [1;31m  UsuarioSeleniumTest.deveExibirErroCPFInvalido:43 » NoSuchElement no such element: Unable to locate element: {"method":"css selector","selector":".alert-danger"}
+  (Session info: chrome=149.0.7827.115)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [aaf69dd9afc76c7e902dbc1444a3a540, findElement {using=css selector, value=.alert-danger}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.115, chrome: {chromedriverVersion: 149.0.7827.115 (daf70f9ddee..., userDataDir: C:\Users\diego\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56573}, goog:processID: 7896, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56573/devtoo..., se:cdpVersion: 149.0.7827.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: aaf69dd9afc76c7e902dbc1444a3a540[m
+[INFO] 
+[ERROR] [1;31mTests run: 37, Failures: 9, Errors: 3, Skipped: 0[m
+[INFO] 
+[INFO] [1m------------------------------------------------------------------------[m
+[INFO] [1;31mBUILD FAILURE[m
+[INFO] [1m------------------------------------------------------------------------[m
+[INFO] Total time:  01:03 min
+[INFO] Finished at: 2026-06-14T17:33:07-03:00
+[INFO] [1m------------------------------------------------------------------------[m
+[ERROR] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:3.2.5:test[m [1m(default-test)[m on project [36mbibliotech[m: [1;31mThere are test failures.[m
+[ERROR] [1;31m[m
+[ERROR] [1;31mPlease refer to C:\Users\diego\bibliotech\bibliotech\target\surefire-reports for the individual test results.[m
+[ERROR] [1;31mPlease refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.[m
+[ERROR] -> [1m[Help 1][m
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[ERROR] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
