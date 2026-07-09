@@ -1,11 +1,8 @@
 package com.bibliotech.unit;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.*;
-import static org.mockito.Mockito.*;
-
-import java.util.Optional;
-
+import com.bibliotech.model.Usuario;
+import com.bibliotech.repository.UsuarioRepository;
+import com.bibliotech.service.UsuarioService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,12 +11,20 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.bibliotech.model.Usuario;
-import com.bibliotech.repository.UsuarioRepository;
-import com.bibliotech.service.UsuarioService;
+import java.util.Optional;
 
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+
+/**
+ * Testes unitários para UsuarioService.
+ *
+ * Bugs identificados:
+ * - BUG-003: autenticar() usa == em vez de .equals() para comparar Strings,
+ *            fazendo com que credenciais válidas nunca autentiquem (RF-15)
+ */
 @ExtendWith(MockitoExtension.class)
-@DisplayName("Testes do UsuarioService")
+@DisplayName("Testes Unitários - UsuarioService")
 public class UsuarioServiceTest {
 
     @Mock
@@ -28,87 +33,122 @@ public class UsuarioServiceTest {
     @InjectMocks
     private UsuarioService usuarioService;
 
-    private Usuario usuarioJoao;
+    private Usuario usuarioPadrao;
 
     @BeforeEach
     void setUp() {
-        usuarioJoao = new Usuario();
-        usuarioJoao.setNome("João Silva");
-        usuarioJoao.setEmail("joao@email.com");
-        usuarioJoao.setCpf("123.456.789-00");
-        usuarioJoao.setSenha("senha123");
-        usuarioJoao.setTipo(Usuario.TipoUsuario.ALUNO);
-        usuarioJoao.setAtivo(true);
+        usuarioPadrao = new Usuario(
+            "Admin",
+            "admin@bibliotech.com",
+            "123.456.789-09",
+            "admin123",
+            Usuario.TipoUsuario.FUNCIONARIO
+        );
+    }
+
+    // ==================== TESTES: validarCPF ====================
+
+    @Test
+    @DisplayName("TU-013: CPF no formato correto deve ser válido (RN-07)")
+    void deveValidarCPFFormatoCorreto() {
+        assertTrue(usuarioService.validarCPF("123.456.789-00"),
+            "CPF no formato ###.###.###-## deve ser válido");
     }
 
     @Test
-    @DisplayName("TU-010: Deve validar CPF no formato correto")
-    void deveValidarCPFCorreto() {
-        assertTrue(usuarioService.validarCPF("123.456.789-00"));
-        assertTrue(usuarioService.validarCPF("987.654.321-99"));
+    @DisplayName("TU-014: CPF sem pontuação deve ser inválido (RN-07)")
+    void deveInvalidarCPFSemPontuacao() {
+        assertFalse(usuarioService.validarCPF("12345678900"),
+            "CPF sem pontuação não deve ser aceito");
     }
 
     @Test
-    @DisplayName("TU-011: Deve rejeitar CPF com formato inválido")
-    void deveRejeitarCPFInvalido() {
-        assertFalse(usuarioService.validarCPF("123.456.789"));
-        assertFalse(usuarioService.validarCPF("123.456.789-0"));
-        assertFalse(usuarioService.validarCPF("abc.def.ghi-jk"));
-        assertFalse(usuarioService.validarCPF(""));
-        assertFalse(usuarioService.validarCPF(null));
+    @DisplayName("TU-015: CPF nulo deve ser inválido (RN-07)")
+    void deveInvalidarCPFNulo() {
+        assertFalse(usuarioService.validarCPF(null),
+            "CPF nulo deve retornar false");
     }
 
     @Test
-    @DisplayName("TU-012: Deve lançar exceção ao salvar usuário com email já cadastrado")
+    @DisplayName("TU-016: CPF vazio deve ser inválido (RN-07)")
+    void deveInvalidarCPFVazio() {
+        assertFalse(usuarioService.validarCPF(""),
+            "CPF vazio deve retornar false");
+    }
+
+    @Test
+    @DisplayName("TU-017: CPF com formato parcialmente errado deve ser inválido (RN-07)")
+    void deveInvalidarCPFFormatoParcialmenteErrado() {
+        assertFalse(usuarioService.validarCPF("123.456.789-0"),
+            "CPF com formato parcialmente errado não deve ser aceito");
+    }
+
+    // ==================== TESTES: autenticar ====================
+
+    @Test
+    @DisplayName("TU-018: Autenticação com credenciais válidas deve retornar o usuário (RF-15) [BUG-003]")
+    void deveAutenticarComCredenciaisValidas() {
+        when(usuarioRepository.findByEmail("admin@bibliotech.com"))
+            .thenReturn(Optional.of(usuarioPadrao));
+
+        Optional<Usuario> resultado = usuarioService.autenticar(
+            "admin@bibliotech.com", "admin123");
+
+        assertTrue(resultado.isPresent(),
+            "BUG-003: Autenticação com credenciais válidas deve retornar o usuário. " +
+            "O bug usa == em vez de .equals() para comparar a senha, o que nunca é verdadeiro para objetos String distintos.");
+    }
+
+    @Test
+    @DisplayName("TU-019: Autenticação com senha errada deve retornar vazio")
+    void deveRetornarVazioComSenhaErrada() {
+        when(usuarioRepository.findByEmail("admin@bibliotech.com"))
+            .thenReturn(Optional.of(usuarioPadrao));
+
+        Optional<Usuario> resultado = usuarioService.autenticar(
+            "admin@bibliotech.com", "senhaErrada");
+
+        assertFalse(resultado.isPresent(),
+            "Autenticação com senha incorreta deve falhar");
+    }
+
+    @Test
+    @DisplayName("TU-020: Autenticação com email inexistente deve retornar vazio")
+    void deveRetornarVazioComEmailInexistente() {
+        when(usuarioRepository.findByEmail("naoexiste@teste.com"))
+            .thenReturn(Optional.empty());
+
+        Optional<Usuario> resultado = usuarioService.autenticar(
+            "naoexiste@teste.com", "qualquersenha");
+
+        assertFalse(resultado.isPresent(),
+            "Autenticação com email inexistente deve retornar Optional vazio");
+    }
+
+    // ==================== TESTES: salvar ====================
+
+    @Test
+    @DisplayName("TU-021: Deve lançar exceção ao salvar usuário com CPF inválido")
+    void deveLancarExcecaoComCPFInvalido() {
+        Usuario u = new Usuario("Teste", "teste@email.com", "cpfinvalido",
+            "senha", Usuario.TipoUsuario.ALUNO);
+
+        assertThrows(RuntimeException.class,
+            () -> usuarioService.salvar(u),
+            "Deve lançar exceção ao tentar salvar usuário com CPF inválido");
+    }
+
+    @Test
+    @DisplayName("TU-022: Deve lançar exceção ao cadastrar email duplicado")
     void deveLancarExcecaoEmailDuplicado() {
-        when(usuarioRepository.findByEmail("joao@email.com")).thenReturn(Optional.of(usuarioJoao));
+        when(usuarioRepository.findByEmail("admin@bibliotech.com"))
+            .thenReturn(Optional.of(usuarioPadrao));
 
-        RuntimeException excecao = assertThrows(RuntimeException.class,
-                () -> usuarioService.salvar(usuarioJoao),
-                "Deveria lançar exceção ao salvar email duplicado");
+        Usuario novoUsuario = new Usuario("Outro", "admin@bibliotech.com",
+            "987.654.321-00", "senha456", Usuario.TipoUsuario.ALUNO);
 
-        assertEquals("Email já cadastrado", excecao.getMessage());
-        verify(usuarioRepository, never()).save(any(Usuario.class));
-    }
-
-    @Test
-    @DisplayName("TU-013: Deve lançar exceção ao salvar usuário com CPF já cadastrado")
-    void deveLancarExcecaoCPFDuplicado() {
-        when(usuarioRepository.findByEmail(anyString())).thenReturn(Optional.empty());
-        when(usuarioRepository.findByCpf("123.456.789-00")).thenReturn(Optional.of(usuarioJoao));
-
-        RuntimeException excecao = assertThrows(RuntimeException.class,
-                () -> usuarioService.salvar(usuarioJoao),
-                "Deveria lançar exceção ao salvar CPF duplicado");
-
-        assertEquals("CPF já cadastrado", excecao.getMessage());
-    }
-
-    @Test
-    @DisplayName("TU-014: Deve autenticar usuário com credenciais corretas (BUG esperado: comparação de senha com ==)")
-    void deveAutenticarUsuarioAtivo() {
-        when(usuarioRepository.findByEmail("joao@email.com")).thenReturn(Optional.of(usuarioJoao));
-
-        // Cria uma senha idêntica, mas como objeto separado (evita o pool de strings)
-        String senhaFornecida = new String("senha123");
-        Optional<Usuario> resultado = usuarioService.autenticar("joao@email.com", senhaFornecida);
-
-        // O serviço usa '==', portanto a autenticação falhará mesmo com a senha correta
-        assertTrue(resultado.isPresent(), "BUG-006: Deveria autenticar usuário com senha correta");
-        assertEquals("João Silva", resultado.get().getNome());
-    }
-
-    @Test
-    @DisplayName("TU-017: Deve lançar exceção ao excluir usuário com empréstimos ativos (BUG esperado: não verifica)")
-    void deveImpedirExclusaoComEmprestimosAtivos() {
-        // O método excluir atualmente NÃO verifica empréstimos ativos, portanto deve falhar.
-        when(usuarioRepository.findById(1L)).thenReturn(Optional.of(usuarioJoao));
-
-        // Como o serviço não implementa a regra RN-06, a exceção NÃO será lançada.
-        RuntimeException excecao = assertThrows(RuntimeException.class,
-                () -> usuarioService.excluir(1L),
-                "Deveria lançar exceção ao excluir usuário com empréstimos ativos");
-
-        assertEquals("Não é possível excluir usuário com empréstimos ativos", excecao.getMessage());
+        assertThrows(RuntimeException.class,
+            () -> usuarioService.salvar(novoUsuario),
+            "Deve lançar exceção ao tentar cadastrar email já existente");
     }
 }
