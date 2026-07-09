@@ -1,7 +1,5 @@
 # Relatório do Grupo — BiblioTech
 
-Data: 2026-07-08
-
 Integrantes:
 
 - Rafael Fiuza de Santana
@@ -15,12 +13,6 @@ O BiblioTech é um sistema de gestão de biblioteca desenvolvido em Java com Spr
 - Funcionalidades: cadastro de livros, gerenciamento de usuários, registro de empréstimos e devoluções, cálculo de multas e interface web para administração.
 - Tecnologias: Java, Spring Boot, Thymeleaf (templates), Maven.
 - Testes e evidências: inclui testes unitários e testes automatizados (Selenium), além de relatórios de execução e capturas de tela na pasta `evidencias`.
-
-## Observações
-
-Este arquivo foi gerado a pedido do usuário para documentar os integrantes e resumir o projeto.
-
-## Resumo Executivo
 
 1. Arquitetura: Aplicação Java com Spring Boot seguindo padrão MVC, usando Thymeleaf para templates e Maven para gerenciamento de dependências e build.
 
